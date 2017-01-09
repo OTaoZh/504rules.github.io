@@ -142,9 +142,9 @@
 		<div class="col-md-6 col-xs-6">
 			<div class="heading">
 				{{#order.clockwise}}
-					<h2>Clockwise player order</h2>
+					<h2>顺时针行动顺序</h2>
 					{{^mapnum.1}}{{^mapnum.2}}{{^mapnum.3}}<p>Common capital in center of map</p>{{/mapnum.3}}{{/mapnum.2}}{{/mapnum.1}}
-					{{^mapnum.4}}{{^mapnum.5}}<p>Capitals chosen counter clockwise from last player to first</p>{{/mapnum.5}}{{/mapnum.4}}
+					{{^mapnum.4}}{{^mapnum.5}}<p>按逆时针行动顺序选择首都，最后一位玩家先选择</p>{{/mapnum.5}}{{/mapnum.4}}
 				{{/order.clockwise}}
 				{{#order.income}}
 					<h2>Round-based {{owner}} order</h2>
@@ -162,18 +162,18 @@
 		</div>
 		<div class="col-md-3 col-xs-3">
 			<div class="heading">
-				<h2>Starting Money</h2>
+				<h2>起始金钱</h2>
 				{{#money.fixed}}<p>Each player gets ${{money.amount}}</p>{{/money.fixed}}
 				{{#money.increasing}}<p>In turn order $60, $70, $80, $90 (2♟: $60, $80)</p>{{/money.increasing}}
 				{{#money.shares}}<p>Each ♟: ($600 / # of players)</p>{{/money.shares}}
-				{{#3.III}}<p>Each player gets an additional $20</p>{{/3.III}}
+				{{#3.III}}<p>每位玩家获得额外的$20</p>{{/3.III}}
 			</div>
 		</div>
 	</div>
 </script>
 <script id="template-setup" type="x-tmpl-mustache">
 	<div class="row section">
-		<div class="col-md-2 col-xs-2"><h1>Special game parts</h1></div>
+		<div class="col-md-2 col-xs-2"><h1>本游戏组件</h1></div>
 		<div class="col-md-10 col-xs-10">
 			<ul class="parts">
 				{{#parts}}
@@ -188,12 +188,12 @@
 		</div>
 	</div>{{/company}}
 	<div class="row section">
-		<div class="col-md-2 col-xs-2"><h1>Game Preparation</h1></div>
+		<div class="col-md-2 col-xs-2"><h1>游戏准备</h1></div>
 		<div class="col-md-10 col-xs-10">
 			{{#5}}<p>Place all map tiles in separate stacks in a row as follows: city, water, grassland, forest, field, mountain and desert. {{#1}}{{^1.III}}Lay out the cities in a numerical ascending stack - lowest numbered city on top, city "10" on bottom.{{/1.III}}{{/1}}</p>{{/5}}
 			<p>
-				Lay out map {{map.value}}.
-				{{#1}}{{^1.III}}Display cities with their goods side atop. {{#8}}The cities remain empty of goods.{{/8}}{{^8}} Place 4 goods onto each city, matching the small circular symbol.{{/8}}{{/1.III}}{{/1}}
+				按图{{map.value}}摆放地图.
+				{{#1}}{{^1.III}}在城市上摆放相应的货物. {{#8}}The cities remain empty of goods.{{/8}}{{^8}} 按照标记，每个城市放置4个货物.{{/8}}{{/1.III}}{{/1}}
 				{{#8}}
 					{{^8.III}}
 						Display land and water tiles with the goods side atop.
@@ -229,9 +229,9 @@
 				{{/9.III}}
 			</p>{{/9}}
 			{{#3}}
-				<p>The privileges used in this game are: <strong>{{priv.list}}</strong>.<br />{{#company}}Take 2 cards of each privilege for the deck.{{/company}}{{^company}}4♟: Take 2 cards of each privilege for the deck. 3♟: First take 1 card of each privilege, shuffle them and remove half of them from the game. Then, add 1 card of each privilege to the remaining half for the deck. 2♟: Take 1 card of each privilege for the deck.{{/company}}</p>
- 				<p>Shuffle the privileges separated by card backs I, II, III and place them in a single stack, so that the cards with the back I are on top, the cards with the back III are at the bottom.</p>
-				<p>Place the price token next to the map. Draw 1 privilege per {{owner}} and place them in a face-up row to the right of the price token, so that the minimal bid for each privilege is $20.</p>
+				<p>本次游戏中将会用到以下特权卡: <strong>{{priv.list}}</strong>.<br />{{#company}}将以上所有的特权卡（各两张）加入牌堆。{{/company}}{{^company}}4♟: 将以上所有的特权卡（各两张）加入牌堆。3♟: 先从每种特权卡各取一张，洗匀后弃掉一半，另一半与剩余的特权卡组成牌堆。2♟: 每种特权卡各取一张组成牌堆。{{/company}}</p>
+ 				<p>将特权卡按牌背上的数字I、II、III分组洗匀，然后组成一个牌堆，牌背为I的卡牌在最上面，牌背为III的卡牌在最下面。</p>
+				<p>将价格标志物放在地图旁边。每个{{owner}}抽取一张特权卡并将它们正面朝上地放置在价格标志物的右侧，也就是说每张特权卡的最低竞拍价为$20。</p>
 			{{/3}}
 			{{#2.III}}
 				{{^5.I}}{{^6}}{{^7}}
@@ -268,7 +268,7 @@
 				{{/9.I}}
 			{{/2.III}}
 			{{#2}}{{^2.III}}
-					<p>Place the 10 city cards face up next to the map.</p>
+					<p>将10张城市卡全部正面朝上放在地图一侧。</p>
 			{{/2.III}}{{/2}}
 			{{#6}}
 				{{^4}}<p>Each {{owner}} gets {{^company}}19{{/company}}{{#company}}14{{/company}} roads in {{owns}} color. If necessary the {{agent}}s may build more roads and need to use suitable replacement parts for these additional roads.</p>{{/4}}
@@ -278,7 +278,7 @@
 				<p>Lay out the {{#9.II}}{{#7.I}}scoring{{/7.I}}{{^7.I}}company order{{/7.I}}{{/9.II}}{{^9.II}}player order{{/9.II}} cards for 5 companies for the business rounds (BR) and place 1 resident of each company next to these cards. 1 player gets the starting player card for the 1st share round (SR).</p>
 			{{/company}}
 			<p>
-				{{#order.clockwise}}Players choose a start player, turns will proceed clockwise. {{^mapnum.1}}{{^mapnum.2}}{{^mapnum.3}}Players all place their capitals in the central city.{{/mapnum.3}}{{/mapnum.2}}{{/mapnum.1}}{{^mapnum.4}}{{^mapnum.5}}In reverse turn order players choose their capitals.{{/mapnum.5}}{{/mapnum.4}}{{/order.clockwise}}
+				{{#order.clockwise}}选择一名起始玩家，按顺时针顺序行动。 {{^mapnum.1}}{{^mapnum.2}}{{^mapnum.3}}Players all place their capitals in the central city.{{/mapnum.3}}{{/mapnum.2}}{{/mapnum.1}}{{^mapnum.4}}{{^mapnum.5}}按逆时针顺序选择首都。{{/mapnum.5}}{{/mapnum.4}}{{/order.clockwise}}
 				{{^order.clockwise}}
 					{{#order.shares}}Players choose a start player for the first SR. Capitals are placed when companies are established.{{/order.shares}}
 					{{^order.shares}}
@@ -301,7 +301,7 @@
 				{{/order.clockwise}}
 			</p>
 			{{#1}}{{^1.III}}
-				<p>When placing capitals, {{agent}}s must choose cities that offer different types of goods.</p>
+				<p>放置首都时，{{agent}}只能选择提供不同各类货物的城市。</p>
 			{{/1.III}}{{/1}}
 			{{#4}}
 				{{#9}}
@@ -317,13 +317,13 @@
 				{{^8}}<p>Place 1 barrack and 1 militia on all free cities which are not chosen as capitals.</p>{{/8}}
 			{{/4}}
 			{{#2}}{{^2.III}}
-					<p>To mark the chosen capitals, place 1 settlement of each {{owner}} onto the matching city cards.</p>
-					{{^residents}}<p>The {{agent}}s place their{{#company}} companies&rsquo;{{/company}} 9 residents on the 9 cities, which they did not choose as their capitals.</p>{{/residents}}
+					<p>每名{{owner}}在对应的城市卡上放置一个结算标记表示所选择的首都。</p>
+					{{^residents}}<p>{{agent}}s 将他们的{{#company}} companies&rsquo;{{/company}} 9 个居民放置9座城市上，表示这些城市不是首都。</p>{{/residents}}
 			{{/2.III}}{{/2}}
 			{{#1}}
 				{{#1.III}}
 					{{^residents}}<p>Each transport trolley starts with 3 movement points (MP). Each {{agent}} places {{fowns}} transport trolley onto {{owns}} capital.</p>{{/residents}}
-					{{#residents}}<p>Each transport trolley starts with 1 cargo hold and 3 movement points (MP). Each {{agent}} places {{fowns}} transport trolley onto {{owns}} capital.</p>{{/residents}}
+					{{#residents}}<p>开始时，每个手推车自带1个货仓与3个行动点（MP）。每个{{agent}}将{{fowns}}手推车放置在{{owns}}首都。</p>{{/residents}}
 				{{/1.III}}
 				{{^1.III}}
 					<p>Each transport trolley starts with 1 cargo hold and 3 movement points (MP). Each {{agent}} places {{fowns}} transport trolley onto {{owns}} capital{{^8}} and directly loads 1 good from there into {{owns}} cargo hold{{/8}}.</p>
